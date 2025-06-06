@@ -189,19 +189,19 @@ while rodando:
         novo_estado = personagem.estado
 
         if teclas[pygame.K_RIGHT]:
-            personagem.velocidade_x = 5
+            personagem.velocidade_x = 3
             novo_estado = "direita"
             personagem.direcao = "direita"
         elif teclas[pygame.K_LEFT]:
-            personagem.velocidade_x = -5
+            personagem.velocidade_x = -3
             novo_estado = "esquerda"
             personagem.direcao = "esquerda"
         elif teclas[pygame.K_UP]:
-            personagem.velocidade_y = -5
+            personagem.velocidade_y = -3
             novo_estado = "cima"
             personagem.direcao = "cima"
         elif teclas[pygame.K_DOWN]:
-            personagem.velocidade_y = 5
+            personagem.velocidade_y = 3
             novo_estado = "baixo"
             personagem.direcao = "baixo"
         else:

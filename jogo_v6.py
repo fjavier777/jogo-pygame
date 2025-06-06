@@ -30,8 +30,8 @@ fonte_grande = pygame.font.SysFont(None, 72)
 botao_inicio = pygame.Rect(largura//2 - 100, altura//2 - 25, 200, 50)
 texto_botao = fonte.render("Iniciar Jogo", True, PRETO)
 
-# Tempo inicial (2 minutos e 35 segundos)
-tempo_inicial = 2 * 60 + 35  # 2:35 em segundos
+# Tempo inicial (2 minutos e 30 segundos)
+tempo_inicial = 2 * 60 + 30  # 2:30 em segundos
 tempo_restante = tempo_inicial
 ultimo_tempo = pygame.time.get_ticks()
 
@@ -200,19 +200,19 @@ while rodando:
         novo_estado = personagem.estado
 
         if teclas[pygame.K_RIGHT]:
-            personagem.velocidade_x = 5
+            personagem.velocidade_x = 3
             novo_estado = "direita"
             personagem.direcao = "direita"
         elif teclas[pygame.K_LEFT]:
-            personagem.velocidade_x = -5
+            personagem.velocidade_x = -3
             novo_estado = "esquerda"
             personagem.direcao = "esquerda"
         elif teclas[pygame.K_UP]:
-            personagem.velocidade_y = -5
+            personagem.velocidade_y = -3
             novo_estado = "cima"
             personagem.direcao = "cima"
         elif teclas[pygame.K_DOWN]:
-            personagem.velocidade_y = 5
+            personagem.velocidade_y = 3
             novo_estado = "baixo"
             personagem.direcao = "baixo"
         else:
